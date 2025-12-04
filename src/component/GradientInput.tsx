@@ -16,7 +16,7 @@ export default function GradientInput({ children }: GradientInputProps) {
             start={{ x: 0.85, y: 0.15 }}
             end={{ x: 0.15, y: 0.85 }}
             locations={[0, 1]}
-            style={tw`rounded-3xl p-[0.95]`}
+            style={tw`rounded-3xl p-[2]`}
         >
             {children}
         </LinearGradient>

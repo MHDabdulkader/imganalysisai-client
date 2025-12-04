@@ -1,5 +1,7 @@
 import { Stack } from 'expo-router';
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
 
 
 export const unstable_settings = {
@@ -10,14 +12,30 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   return (
-    <Stack 
+    <Provider store={store}>
+      <Stack
         screenOptions={{
-            headerShown: false
+          headerShown: false
         }}
-    >
-        <Stack.Screen name="index"/>
-        <Stack.Screen name='(tab)'/>
-        <Stack.Screen name='modal/custom_modal'/>
-    </Stack>
+      >
+        <Stack.Screen name="index" />
+        <Stack.Screen name='(tab)' />
+        <Stack.Screen name='modal/custom_modal' />
+        <Stack.Screen name='auth' />
+        <Stack.Screen 
+          name='tosater'
+          options={{
+            sheetAllowedDetents: "fitToContents",
+            presentation: "formSheet",
+            contentStyle:{
+              backgroundColor: "transparent",
+              paddingBottom: 10
+            }
+          }}
+        
+        />
+      </Stack>
+    </Provider>
+
   )
 }

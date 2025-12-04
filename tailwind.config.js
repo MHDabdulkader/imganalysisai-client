@@ -9,7 +9,11 @@ module.exports = {
       tablet: "1024px",
     },
     extend: {
-      
+      colors: {
+        primary: "#222733",
+        secondary: "#1D94C8",
+        tertiary: "#9F3BDB"
+      }
     },
   },
   plugins: [],
